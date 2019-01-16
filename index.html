@@ -11,14 +11,18 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   <body>
-
+    <div class ="border">
+    </div>
+    <div class ="sm-border">
+    </div>
     <div id="home" class="background">
       <h1 class="title clean-font animated fadeIn">johrten</h1>
-      <h2 class="clean-font header animated delay-1s fadeIn">fullstack developer & designer</h2>
+      <h2 class="clean-font header animated delay-1s fadeIn">front-end developer & designer</h2>
       <div class="center-buttons">
         <a href="https://github.com/johrten/" target="_blank"><img class="social-button animated delay-2s fadeIn" src="src/Githubicon.png" alt="Github"></a>
         <a href="https://linkedin.com/in/johrten/" target="_blank"><img class="social-button animated delay-2s fadeIn" src="src/LinkedInicon.png" alt="LinkedIn"></a>
         <a href="https://twitter.com/johrten/" target="_blank"><img class="social-button animated delay-2s fadeIn" src="src/Twittericon.png" alt="Twitter"></a>
+        <a href="https://medium.com/@Johrten" target="_blank"><img class="social-button animated delay-2s fadeIn" src="src/Mediumicon.png" alt="Twitter"></a>
       </div>
       <div class="scroll-down">
         <img data-id="about" class="scroll-image animated delay-3s fadeIn" src="src/ScrollDownicon.png" alt="Scroll Down">
@@ -47,6 +51,32 @@
       </div>
     </div>
       <div class="scroll-down">
+        <img data-id="projects" class="scroll-image" src="src/ScrollDownicon.png" alt="Scroll Down">
+      </div>
+    </div>
+
+    <div id="projects" class="background">
+      <div class="about-sec">
+      <div class="about-text">
+        <h1 class="clean-font about-me-title">Projects</h1>
+      </div>
+      <div class="about-description">
+        <p class="clean-font">I recently graduated from the Flatiron School's 15-week full-stack development course.
+                                            While attending the program, I used Ruby (on Rails), pure Javascript, and React.js to build
+                                            a variety of programs that took advantage of RESTful APIs. Additionally, I taught myself
+                                            how to use WebSockets and learned recently released tools such as React Context API.</p>
+        <p class="clean-font">Prior to my time at Flatiron, I was the Spa Director at Gentle Healing Wellness Spa. I was
+                                            responsible for all day-to-day operations of the business, including staff management,
+                                            marketing initiatives, and print/online design. </p>
+        <p class="clean-font">In Spring of 2016, I graduated from New York University's Gallatin School in three years
+                                            with a Bachelor of Arts in Content Creation and Marketing. Additionally, I received a minor
+                                            in the business of entertainment, media and technology. By taking classes over summer
+                                            and winter breaks, I received my diploma a full year ahead of schedule. Some of the
+                                            classes I took were "Production and Publication," “Media Ethics & First Amendment Law”
+                                            and "Managing Creative Content Development."</p>
+      </div>
+    </div>
+      <div class="scroll-down">
         <img data-id="contact" class="scroll-image" src="src/ScrollDownicon.png" alt="Scroll Down">
       </div>
     </div>
@@ -57,25 +87,18 @@
         <h1 class="clean-font about-me-title">Contact<br>Me</h1>
       </div>
       <div class="about-description">
-        <form>
-          <label>
-            Name:
-            <span class="right-align"><input type="text" name="name" required></span>
-          </label>
-          <br>
-          <label>
-            Email:
-            <span class="right-align"><input type="email" name="reply_to" required></span>
-          </label>
-          <br>
-          <label>
-            Message:
-            <span class="right-align"><textarea name="message" required></textarea></span>
-          </label>
-          <br>
-          <button type="submit">Send Message</button>
+        <div class="form">
+        <form class="contact-form">
+            <input type="text" name="first_name" placeholder="First Name" class="input-name clean-font" required>
+            <input type="text" name="last_name" placeholder="Last Name" class="input-name clean-font" required>
+            <input type="text" name="company" placeholder="Company" class="input input-text clean-font">
+            <input type="email" name="reply_to" placeholder="Email" class="input input-text clean-font" required>
+            <textarea name="message" placeholder="Message..." class="input input-area clean-font" required></textarea>
+          <button type="submit" class="input submit-btn clean-font">Send Message</button>
+          <p id="js-form-response" class="clean-font"></p>
       </form>
-      <p id="js-form-response"></p>
+      </div>
+
       </div>
     </div>
       <div class="scroll-down">

@@ -24,18 +24,13 @@ for (let i = 0; i < scrollImg.length; i++) {
   form.onsubmit = e => {
     e.preventDefault();
 
-    // Prepare data to send
     const data = {};
     const formElements = Array.from(form);
     formElements.map(input => (data[input.name] = input.value));
-
-
-    // Log what our lambda function will receive
 		console.log(data)
 		console.log(JSON.stringify(data));
-		// debugger
 
-	fetch("{AWS CODE HERE}",{
+	fetch(`https://8s1iqsio6k.execute-api.us-east-1.amazonaws.com/dev/contact-johrten`,{
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -46,11 +41,11 @@ for (let i = 0; i < scrollImg.length; i++) {
 		if (r.status===200) {
 			formResponse.innerHTML = 'Thanks for the message. I’ll be in touch shortly!'
 			e.target.reset()
-			history.pushState(id, johrten, 'http://localhost:8080/')
+			history.pushState("id", "johrten", 'https://www.johrten.com/')
 			// window.location.href = "http://localhost:8080"
 		} else {
 			formResponse.innerHTML = 'Something went wrong';
-        console.error(JSON.parse(r.response).message)
+        console.error(r.statusText)
 		}
 	})
   };
