@@ -4,6 +4,7 @@ html {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
 }
 
 @-webkit-keyframes Gradient {
@@ -36,12 +37,6 @@ body {
   overflow: scroll;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-  background-size: 100% 100%;
-  position: fixed;
-  background-attachment: local;
-  background-repeat: no-repeat;
-  background-position: left top; */
 }
 
 p{
@@ -103,31 +98,29 @@ h1 {
   font-family: 'Dosis', sans-serif;
 }
 
-.title {
-  font-size: 10vw;
+/* Home Page*/
+
+.home-text{
   text-align: center;
-  vertical-align: middle;
-  padding-top: 20vh;
+  position: relative;
+  top: 35%;
+  transform: translateY(-35%);
+}
+
+.title {
+  font-size: 8.25em;
   color: black;
   user-select: none;
   margin: 0px;
-  /* text-shadow: 2px 2px black; */
 }
 
 .header{
   text-align: center;
-  font-size: 4vw;
+  font-size: 4em;
   margin-top: -1vw;
   color: black;
   user-select: none;
   margin-bottom: 1vw;;
-}
-
-.background {
-  height: 100%;
-  width: 100%;
-  position: relative;
-
 }
 
 .center-buttons{
@@ -139,34 +132,37 @@ h1 {
 }
 
 .social-button{
-  width: 5vw;
+  width: 4.5em;
   margin-left: 1vw;
   margin-right: 1vw;
-  /* filter: invert(100%); */
+}
+
+/* End of Home Page*/
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .scroll-down{
   display: flex;
   width: 100%;
   position: absolute;
-  bottom: 3vw;
+  bottom: 40px;
   justify-content: center;
 }
 
 .scroll-image{
-  width: 3vw;
-  height: 3vw;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  /* filter: invert(100%); */
 }
 
 .about-sec{
   padding-top: 15vh;
   height: 80%;
-  /* margin: 2vw; */
   display: flex;
-  /* background-color: white; */
-  /* box-shadow: inset 0 0 40px 20px rgba(255, 255, 255, 1); */
   justify-content: center;
 }
 
@@ -174,7 +170,6 @@ h1 {
   height: 80%;
   width: 45%;
   margin-left: -8%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .about-me-title{
@@ -186,7 +181,6 @@ h1 {
 
 .about-description{
   margin-left: 5%;
-  /* height: 80%; */
   width: 40%;
   color: black;
   font-size: 1.5vw;
