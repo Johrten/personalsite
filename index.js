@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
  }
 )
 
-
 let scrollImg = document.getElementsByClassName("scroll-image")
 
 for (let i = 0; i < scrollImg.length; i++) {
@@ -15,7 +14,6 @@ for (let i = 0; i < scrollImg.length; i++) {
     })
   })
 }
-
 
 (() => {
   const form = document.querySelector('form');
