@@ -4,7 +4,6 @@ html {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-overflow-scrolling: touch;
 }
 
 @-webkit-keyframes Gradient {
@@ -41,28 +40,6 @@ body {
 
 p{
   text-indent: 1.5em;
-}
-
-.border{
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
-  margin: auto;
-  /* height: 90vh;
-  width: 94.25vw; */
-  z-index: -2;
-  /* border: 20px solid;
-  margin: 1.5vw; */
-  /* background-color: rgba(255,255,255,1); */
-  height: 95%;
-  width: 97%;
-  background: linear-gradient(-45deg, #FEAC5E, #C779D0, #23A6D5);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
 }
 
 .outside-border {
@@ -159,24 +136,24 @@ h1 {
   cursor: pointer;
 }
 
-.about-sec{
+.section-area{
   padding-top: 15vh;
   height: 80%;
   display: flex;
   justify-content: center;
 }
 
-.about-text{
-  height: 80%;
-  width: 45%;
-  margin-left: -8%;
-}
-
-.about-me-title{
+.section-title{
   text-align: right;
   font-size: 12vw;
   color: black;
   margin-bottom: 0px;
+}
+
+.section-text{
+  height: 80%;
+  width: 45%;
+  margin-left: -8%;
 }
 
 .about-description{
