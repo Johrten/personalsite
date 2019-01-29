@@ -159,6 +159,8 @@ h1 {
   float: right;
   overflow: scroll;
   text-align: justify;
+  height: 45%;
+  max-height: 700px;
 }
 
 .right-align{
