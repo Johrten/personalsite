@@ -68,11 +68,12 @@ h1 {
 }
 
 .bold-font{
-  font-family: 'Staatliches', cursive;
+  font-family: 'Archivo', sans-serif;
 }
 
 .clean-font{
   font-family: 'Dosis', sans-serif;
+  font-weight:200;
 }
 
 /* Home Page*/
@@ -165,6 +166,78 @@ h1 {
 
 .right-align{
   float: right;
+}
+
+.skill-wrapper{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 15vmin 15vmin 15vmin;
+  grid-template-rows: 15vmin 15vmin 15vmin;
+  /* grid-template-rows: 100px 200px 300px; */
+  grid-gap: 10px;
+  /* grid-auto-rows: minmax(50px, 50px); */
+}
+
+.skill-buttons{
+  width:100%;
+  /* max-width: 100px; */
+}
+
+.skill-one{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.skill-two{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.skill-three{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.skill-four{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.skill-five{
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.skill-six{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.skill-seven{
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.skill-eight{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.skill-transform{
+  transition:all 1s;
+}
+
+.skill-transform:hover{
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition:transform 1.05s ease-in-out;
+  -ms-transition:transform 1.05s ease-in-out;
 }
 
 .form{
