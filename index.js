@@ -22,9 +22,8 @@ for (let i = 0; i < scrollImg.length; i++) {
 
 contactForm.addEventListener("submit", e => {
   e.preventDefault();
-
   const data = {};
-  const formElements = Array.from(form);
+  const formElements = Array.from(e.target);
   formElements.map(input => (data[input.name] = input.value));
 	console.log(data)
 	console.log(JSON.stringify(data));
