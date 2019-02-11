@@ -197,6 +197,7 @@ h1 {
 .js-form-response{
   display: none;
   font-size: 2vmin;
+  padding-top: 10px;
 }
 
 .form{
