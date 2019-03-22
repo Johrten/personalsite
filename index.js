@@ -7,6 +7,7 @@ const aboutMe = document.querySelector(".about-me")
 const projects = document.querySelector(".projects")
 const contactForm = document.querySelector(".form")
 const formResponse = document.querySelector('.js-form-response')
+const modal = document.getElementById('myModal')
 
 let scrollImg = document.getElementsByClassName("scroll-image")
 
@@ -65,7 +66,15 @@ document.addEventListener("click",() => {
 			projects.hidden = true
 			aboutMe.hidden = true
 			break;
+		case "RepoSweeper":
+			modal.style.display = "block"
+			break
+		case "×":
+			modal.style.display = "none"
+			break
 		default:
-
+			if (modal.style.display === "block") {
+				modal.style.display = "none";
+			}
 	}
 })
