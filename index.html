@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>johrten</title>
   <link rel="shortcut icon" type="image/png" href="src/favicon.png" />
   <link rel="stylesheet" type="text/css" href="index.css" />
@@ -12,22 +13,60 @@
 
 <body>
 
-  <div id="home" class="background">
-    <div class="home-text">
-      <h1 class="title clean-font animated fadeIn"><span class="tight-space">joh</span>rten</h1>
-      <h2 class="clean-font header animated delay-1s fadeIn">front-end developer & ui designer</h2>
+    <header class="animated fadeInLeft">
+      <h1 class="header-name clean-font">johrten</h1>
+      <h2 class="clean-font header-jobs"><span class="purple">front-end</span> developer</h2>
+      <h2 class="clean-font header-jobs"><span class="red-brown">ui</span> designer</h2>
       <div class="center-buttons">
-        <a href="https://github.com/johrten/" target="_blank"><img class="social-button social-transform animated delay-2s fadeIn" src="src/Githubicon.png" alt="Github"></a>
-        <a href="https://linkedin.com/in/johrten/" target="_blank"><img class="social-button social-transform animated delay-2s fadeIn" src="src/LinkedInicon.png" alt="LinkedIn"></a>
-        <a href="https://twitter.com/johrten/" target="_blank"><img class="social-button social-transform animated delay-2s fadeIn" src="src/Twittericon.png" alt="Twitter"></a>
-        <a href="https://medium.com/@Johrten" target="_blank"><img class="social-button social-transform animated delay-2s fadeIn" src="src/Mediumicon.png" alt="Twitter"></a>
+        <a href="https://github.com/johrten/" target="_blank"><img class="social-button" id="github" src="src/Githubicon.png" alt="Github"></a>
+        <a href="https://linkedin.com/in/johrten/" target="_blank"><img class="social-button" id="linkedin" src="src/LinkedInicon.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/johrten/" target="_blank"><img class="social-button" id="twitter" src="src/Twittericon.png" alt="Twitter"></a>
+        <a href="https://medium.com/@Johrten" target="_blank"><img class="social-button" id="medium" src="src/Mediumicon.png" alt="Twitter"></a>
       </div>
-    </div>
-    <div class="scroll-down">
-      <img data-id="about" class="scroll-image animated delay-3s fadeIn" src="src/ScrollDownicon.png" alt="Scroll Down">
-    </div>
-  </div>
+      <nav>
+        <ul>
+          <li><h3 class="clean-font section-title purple-underline" data-id="home">home</h3></li>
+          <li><h3 class="clean-font section-title" data-id="projects">projects</h3></li>
+          <li><h3 class="clean-font section-title purple-underline" data-id="skills">skills</h3></li>
+          <li><h3 class="clean-font section-title" data-id="contact">contact</h3></li>
+        </ul>
+      </nav>
+      <!-- <div class="scroll-down">
+        <img data-id="about" class="scroll-image" src="src/ScrollDownicon.png" alt="Scroll Down">
+      </div> -->
+    </header>
 
+    <main class="media">
+      <section class="media-topics" id="home">
+        <p class="clean-font topics-home animated delay-1s fadeIn">...focused on creating <span class="purple">ef<span class="tight-space">fi</span>cient</span> code and <span class="red-brown">engaging</span> design.</p>
+      </section>
+
+      <section class="media-topics" id="projects">
+      </section>
+
+      <section class="media-topics" id="skills">
+      </section>
+
+      <section class="media-topics" id="contact">
+        <div class="form">
+          <form class="contact-form clean-font">
+            <label for="full_name" hidden>Full Name</label>
+              <input type="text" name="full_name" placeholder="Name" class="input clean-font" style="margin-top:0px" required>
+            <label for="full_name" hidden>Company - Optional</label>
+              <input type="text" name="company" placeholder="Company - Optional" class="input clean-font">
+            <label for="email" hidden>Email</label>
+              <input type="email" name="reply_to" placeholder="Email" class="input clean-font" required>
+            <label for="message" hidden>Message</label>
+              <textarea name="message" placeholder="Message..." class="input input-area clean-font" required></textarea>
+            <button type="submit" class="submit-btn clean-font">Send Message</button>
+          </form>
+          <div class="js-form-response">
+            <p class="clean-font submit-msg">Thanks for the message. I’ll be in touch shortly!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+<!--
   <div id="about" class="background">
     <div class="section-area">
       <div class="menu">
@@ -80,7 +119,7 @@
     <div class="scroll-down">
       <img data-id="home" class="scroll-image" src="src/ScrollUpicon.png" alt="Scroll Up">
     </div>
-  </div>
+  </div> -->
 
   <div id="myModal" class="modal">
 
@@ -91,6 +130,20 @@
       </div>
       <h3 class="clean-font">Description</h3>
       <p class="clean-font modal-text">RepoSweeper is a tool for developers to clean up their Github repositories with a friendly, intuitive UI.</p>
+      <h3 class="clean-font">Role</h3>
+      <p class="clean-font modal-text">UI Developer</p>
+      <h3 class="clean-font">Tools I used</h3>
+      <p class="clean-font modal-text">React, CSS3, JSX, HTML, React-popup</p>
+
+      <p class="close">&times;</p>
+    </div>
+
+    <div class="modal-content">
+      <div class="video-responsive">
+        <iframe width="500" height="281.25" src="https://www.youtube.com/watch?v=tejsD8QdlN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h3 class="clean-font">Description</h3>
+      <p class="clean-font modal-text">My personal website utilizes custom CSS, Javascript, and AWS to create a simple tktktk.</p>
       <h3 class="clean-font">Role</h3>
       <p class="clean-font modal-text">UI Developer</p>
       <h3 class="clean-font">Tools I used</h3>
