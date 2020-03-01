@@ -18,7 +18,7 @@ let section = document.getElementsByClassName("section-title")
 
 const handleScroll = () => {
 	let scrollRatio = document.documentElement.scrollTop / document.body.scrollHeight
-	handleMenu(scrollRatio)
+	handleLargeMenu(scrollRatio)
 }
 
 if (widthMatch.matches) {
@@ -45,7 +45,7 @@ widthMatch.addEventListener('change', mm => {
 	}
 })
 
-const handleMenu = ratio =>{
+const handleLargeMenu = ratio =>{
 	if (ratio < .25) {
 		home.classList.add("red-brown")
 		projects.classList.remove("purple")
