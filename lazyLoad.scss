@@ -1,0 +1,123 @@
+@import "variables";
+
+#skills {
+  background-color: $lightBlue;
+  justify-content: center;
+}
+
+.section-title {
+	color: $blue;
+  font-family: $metropolis;
+	font-size: calc( 32px + 1.5vw);
+	font-weight: 600;
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.skill-columns {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-column {
+  list-style: none;
+  margin: .5rem;
+  padding-left: 0;
+  text-align: center;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.skill-header {
+  color: $darkBlue;
+  font-family: $roboto;
+  font-size: calc( 24px + 1.25vw);
+  font-weight: 600;
+  margin: .5rem
+}
+
+.skill {
+  color: $blue;
+  font-family: $roboto;
+  font-size: calc( 16px + 1vw);
+  font-weight: 400;
+  margin: .25rem;
+}
+
+#contact {
+  background-color: $darkBlue;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: $lightBlue;
+  display: flex;
+  flex-direction: column;
+  font-family: $roboto;
+  font-size: calc(16px + 0.35vw);
+  font-weight: 400;
+}
+
+.input {
+  border: none;
+  border-radius: 1rem;
+  line-height: calc(22px + 1.05vw);
+  margin: 1rem;
+  text-indent: 4%;
+
+  &::placeholder {
+    color: $darkBlue;
+    font-family: $roboto;
+    font-size: calc(16px + 0.35vw);
+    font-weight: 400;
+    text-indent: 4%;
+  }
+}
+
+.submit-btn {
+	color: $blue;
+	background: $lightBlue;
+  border: none;
+	border-radius: 1rem;
+  font-family: $roboto;
+  font-size: calc(16px + 0.35vw);
+  font-weight: 400;
+  line-height: calc(22px + 1.05vw);
+  margin: 0 auto;
+	padding: .5rem 2rem;
+  width: fit-content;
+}
+
+.js-form-response {
+  color: $lightBlue;
+	display: none;
+  font-family: $roboto;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (min-height: 425px) {
+
+  .skill-columns {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  label {
+    margin: auto;
+    max-width: 50%;
+    min-width: 30%;
+  }
+}

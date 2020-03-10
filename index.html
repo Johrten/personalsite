@@ -1,159 +1,110 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>johrten</title>
-  <link rel="shortcut icon" type="image/png" href="src/favicon.png" />
-  <link rel="stylesheet" type="text/css" href="index.css" />
-  <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Front end developer in New York City."/>
+    <title>johrten</title>
+    <link rel="shortcut icon" type="image/png" href="src/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="priorityLoad.css" />
+  </head>
 
-<body>
+  <body>
 
-    <header class="animated fadeInLeft">
-      <h1 class="header-name clean-font">johrten</h1>
-      <h2 class="clean-font header-jobs"><span class="purple">front-end</span> developer</h2>
-      <h2 class="clean-font header-jobs"><span class="red-brown">ui</span> designer</h2>
-      <div class="center-buttons">
-        <a href="https://github.com/johrten/" target="_blank"><img class="social-button" id="github" src="src/Githubicon.png" alt="Github"></a>
-        <a href="https://linkedin.com/in/johrten/" target="_blank"><img class="social-button" id="linkedin" src="src/LinkedInicon.png" alt="LinkedIn"></a>
-        <a href="https://twitter.com/johrten/" target="_blank"><img class="social-button" id="twitter" src="src/Twittericon.png" alt="Twitter"></a>
-        <a href="https://medium.com/@Johrten" target="_blank"><img class="social-button" id="medium" src="src/Mediumicon.png" alt="Twitter"></a>
-      </div>
-      <nav>
-        <ul>
-          <li><h3 class="clean-font section-title purple-underline" data-id="home">home</h3></li>
-          <li><h3 class="clean-font section-title" data-id="projects">projects</h3></li>
-          <li><h3 class="clean-font section-title purple-underline" data-id="skills">skills</h3></li>
-          <li><h3 class="clean-font section-title" data-id="contact">contact</h3></li>
-        </ul>
-      </nav>
-      <!-- <div class="scroll-down">
-        <img data-id="about" class="scroll-image" src="src/ScrollDownicon.png" alt="Scroll Down">
-      </div> -->
-    </header>
+      <header>
+        <h1 class="header-name">
+          JOHRTEN
+        </h1>
+        <h2 class="header-jobs">
+          <span class="dark-accent">front-end</span>
+          developer &
+          <span style="white-space: nowrap;">
+            <span class="dark-accent">ui</span>
+            designer...
+          </span>
+          </h2>
+        <div class="center-buttons">
+          <a href="https://github.com/johrten/" target="_blank" rel="noopener">
+            <img class="social-button" id="github" src="src/Githubicon.svg" alt="Github">
+          </a>
+          <a href="https://linkedin.com/in/johrten/" target="_blank" rel="noopener">
+            <img class="social-button" id="linkedin" src="src/LinkedInicon.svg" alt="LinkedIn">
+          </a>
+        </div>
+      </header>
 
-    <main class="media">
       <section class="media-topics" id="home">
-        <p class="clean-font topics-home animated delay-1s fadeIn">...focused on creating <span class="purple">ef<span class="tight-space">fi</span>cient</span> code and <span class="red-brown">engaging</span> design.</p>
-      </section>
-
-      <section class="media-topics" id="projects">
+        <p class="dek">
+          ...focused on building
+          <span class="light-accent">engaging</span>
+          designs with
+          <span class="light-accent">ef<span class="tight-space">fi</span>cient</span>
+          code.
+        </p>
       </section>
 
       <section class="media-topics" id="skills">
+        <h2 class="section-title">SKILLS</h2>
+        <div class="skill-columns">
+          <div>
+            <h3 class="skill-header">Technical</h3>
+            <ul class="skill-column">
+              <li class="skill">Javascript</li>
+              <li class="skill">React</li>
+              <li class="skill">Node</li>
+              <li class="skill dark-accent">AWS</li>
+              <li class="skill">PHP</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="skill-header">Creative</h3>
+            <ul class="skill-column">
+              <li class="skill">InDesign</li>
+              <li class="skill">Photoshop</li>
+              <li class="skill dark-accent">Adobe XD</li>
+              <li class="skill">Marvel</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="skill-header tight-space">Workflow</h3>
+            <ul class="skill-column">
+              <li class="skill">Git</li>
+              <li class="skill">Docker</li>
+              <li class="skill">Jira</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="media-topics" id="contact">
+        <h2 class="section-title">CONTACT</h2>
         <div class="form">
-          <form class="contact-form clean-font">
-            <label for="full_name" hidden>Full Name</label>
-              <input type="text" name="full_name" placeholder="Name" class="input clean-font" style="margin-top:0px" required>
-            <label for="full_name" hidden>Company - Optional</label>
-              <input type="text" name="company" placeholder="Company - Optional" class="input clean-font">
-            <label for="email" hidden>Email</label>
-              <input type="email" name="reply_to" placeholder="Email" class="input clean-font" required>
-            <label for="message" hidden>Message</label>
-              <textarea name="message" placeholder="Message..." class="input input-area clean-font" required></textarea>
-            <button type="submit" class="submit-btn clean-font">Send Message</button>
+          <form class="contact-form">
+            <label for="full_name">
+              Full Name
+              <input type="text" name="full_name" placeholder="Name" class="input" required>
+            </label>
+            <label for="company">
+              Company - Optional
+              <input type="text" name="company" placeholder="Company - Optional" class="input">
+            </label>
+            <label for="reply_to">
+              Email
+              <input type="email" name="reply_to" placeholder="Email" class="input" required>
+            </label>
+            <label for="message">
+              Message
+              <textarea name="message" placeholder="Message..." class="input input-area" required></textarea>
+            </label>
+            <button type="submit" class="submit-btn">Send Message</button>
           </form>
           <div class="js-form-response">
-            <p class="clean-font submit-msg">Thanks for the message. I’ll be in touch shortly!</p>
+            <p class="submit-msg">Thanks for the message. I’ll be in touch shortly!</p>
           </div>
         </div>
       </section>
-    </main>
-<!--
-  <div id="about" class="background">
-    <div class="section-area">
-      <div class="menu">
-        <h2 class="clean-font red-brown section-title">about</h2>
-        <h2 class="clean-font purple section-title">projects</h2>
-        <h2 class="clean-font red-brown section-title">contact</h2>
-      </div>
-      <div class="section-fill">
-
-        <div class="about-me" hidden>
-          <p class="clean-font">I'm always working on creating efficient code and engaging design.
-            If you're interested, I'd love to talk about all the fun I've had working with
-            <span class="red-brown">Javascript</span>, CSS3, AWS, <span class="red-brown">WebSockets</span>,
-            Rails, HTML, <span class="red-brown"> React</span>, Adobe Xd, InDesign, and
-            <span class="red-brown">Photoshop</span>.</p>
-        </div>
-
-        <div class="projects" hidden>
-          <h3 class="clean-font">front-end<h3>
-          <ul>
-            <li class="clean-font project-example">RepoSweeper</li>
-            <li class="clean-font project-example">Personal Website</li>
-          </ul>
-          <h3 class="clean-font">fullstack<h3>
-          <ul>
-            <li class="clean-font project-example">Don't Kill Me</li>
-            <li class="clean-font project-example">Send Doods</li>
-          </ul>
-        </div>
-
-        <div class="form" hidden>
-          <form class="contact-form">
-            <label for="full_name" hidden>Full Name</label>
-            <input type="text" name="full_name" placeholder=" Name" class="input clean-font" style="margin-top:0px" required>
-            <label for="full_name" hidden>Company - Optional</label>
-            <input type="text" name="company" placeholder=" Company - Optional" class="input input-text clean-font">
-            <label for="email" hidden>Email</label>
-            <input type="email" name="reply_to" placeholder=" Email" class="input input-text clean-font" required>
-            <label for="message" hidden>Message</label>
-            <textarea name="message" placeholder=" Message..." class="input input-area clean-font" required></textarea>
-            <button type="submit" class="input submit-btn clean-font">Send Message</button>
-          </form>
-          <div class="js-form-response">
-            <p class="clean-font submit-msg">Thanks for the message. I’ll be in touch shortly!</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="scroll-down">
-      <img data-id="home" class="scroll-image" src="src/ScrollUpicon.png" alt="Scroll Up">
-    </div>
-  </div> -->
-
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="video-responsive">
-        <iframe width="500" height="281.25" src="https://www.youtube.com/embed/kI7Lw-u-k4E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <h3 class="clean-font">Description</h3>
-      <p class="clean-font modal-text">RepoSweeper is a tool for developers to clean up their Github repositories with a friendly, intuitive UI.</p>
-      <h3 class="clean-font">Role</h3>
-      <p class="clean-font modal-text">UI Developer</p>
-      <h3 class="clean-font">Tools I used</h3>
-      <p class="clean-font modal-text">React, CSS3, JSX, HTML, React-popup</p>
-
-      <p class="close">&times;</p>
-    </div>
-
-    <div class="modal-content">
-      <div class="video-responsive">
-        <iframe width="500" height="281.25" src="https://www.youtube.com/watch?v=tejsD8QdlN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <h3 class="clean-font">Description</h3>
-      <p class="clean-font modal-text">My personal website utilizes custom CSS, Javascript, and AWS to create a simple tktktk.</p>
-      <h3 class="clean-font">Role</h3>
-      <p class="clean-font modal-text">UI Developer</p>
-      <h3 class="clean-font">Tools I used</h3>
-      <p class="clean-font modal-text">React, CSS3, JSX, HTML, React-popup</p>
-
-      <p class="close">&times;</p>
-    </div>
-
-  </div>
-</body>
-<script src="./index.js" charset="utf-8"></script>
-
+  </body>
+  <link rel="stylesheet" type="text/css" href="lazyLoad.css" />
+  <script src="./index.js" charset="utf-8"></script>
 </html>
