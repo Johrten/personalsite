@@ -141,7 +141,7 @@ label {
   text-indent: 4%;
 }
 .input::placeholder {
-  color: #0e0845;
+  color: white;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
   font-weight: 400;
@@ -180,7 +180,7 @@ label {
   label {
     margin: auto;
     max-width: 50%;
-    min-width: 30%;
+    min-width: 40%;
   }
 }
 
