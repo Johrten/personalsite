@@ -1,0 +1,84 @@
+/* roboto-regular */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('src/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('src/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Roboto Italic'), local('Roboto-Italic'),
+    url('src/roboto-v20-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('src/roboto-v20-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('src/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('src/roboto-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: fallback;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+    url('src/roboto-v20-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('src/roboto-v20-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+  src: local('Metropolis Semibold'), local('Metropolis-SemiBold'),
+    url('src/Metropolis-SemiBold.woff2') format('woff'),
+    url('src/Metropolis-SemiBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Metropolis Regular'), local('Metropolis-Regular'),
+    url('src/Metropolis-Regular.woff2') format('woff'),
+    url('src/Metropolis-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+$darkBlue: rgb(14, 8, 69);
+$blue: rgb(64, 104, 206);
+$lightBlue: rgb(181, 223, 229);
+
+$metropolis: Metropolis, Helvetica, sans-serif;
+$roboto: Roboto, Helvetica, sans-serif;
+
+.dark-accent {
+  color: $darkBlue !important;
+}
+
+.light-accent {
+  color: $lightBlue !important;
+}

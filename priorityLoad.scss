@@ -1,0 +1,159 @@
+@import "variables";
+
+body {
+	margin: 0;
+  overflow-x:hidden;
+}
+
+header {
+  align-items: center;
+	background: $lightBlue;
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 2rem);
+	justify-content: center;
+  padding: 1rem;
+
+  >*{
+    width: fit-content;
+  }
+}
+
+.header-name {
+	font-size: calc( 48px + 2vw);
+	color: $blue;
+	font-family: $metropolis;
+  margin: 1rem;
+	text-align: center;
+  user-select: none;
+}
+
+.header-jobs {
+  color: $blue;
+  font-family: $metropolis;
+	font-size: calc( 24px + 2vw);
+	font-weight: 400;
+  margin: 1rem;
+	text-align: center;
+	user-select: none;
+}
+
+.center-buttons {
+  align-content: center;
+  align-items: center;
+  display: grid;
+	justify-content: center;
+	// width: 100%;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+	grid-template-columns: calc( 64px + 1vw ) calc( 64px + 1vw );
+  margin: 24px 0;
+}
+
+.social-button {
+	border-radius: 100%;
+  filter: invert(100%);
+  transition: all 1.1s;
+  width: calc( 64px + 1vw );
+
+	&:hover {
+		-moz-transform: scale(1.15);
+		-webkit-transform: scale(1.15);
+		-o-transform: scale(1.15);
+		-ms-transform: scale(1.15);
+		-webkit-transform: scale(1.15);
+		transform: scale(1.15);
+		-webkit-transition: transform 0.75s ease-in-out;
+		-moz-transition: transform 0.75s ease-in-out;
+		-ms-transition: transform 0.75s ease-in-out;
+	}
+}
+
+#github {
+	&:hover {
+		background: black;
+	}
+}
+
+#linkedin {
+	&:hover {
+		background: #1178b3;
+	}
+}
+
+#twitter {
+	&:hover {
+		background: #29a3ef;
+	}
+}
+
+#medium {
+	&:hover {
+		background: black;
+	}
+}
+
+.scroll-image {
+  cursor: pointer;
+	height: 40px;
+  width: 40px;
+}
+
+.scroll-down {
+  bottom: 32px;
+  display: flex;
+  filter: invert(100%);
+  justify-content: center;
+  padding: 1rem;
+  position: absolute;
+  width: calc(100% - 4rem);
+}
+
+.media-topics {
+	height: calc(100vh - 2rem);
+  padding: 1rem;
+}
+
+#home {
+  align-items: center;
+  background-color: $darkBlue;
+  display: flex;
+}
+
+.dek {
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  color: $blue;
+  font-family: $roboto;
+	font-size: calc(32px + 2vw);
+  margin-left: auto;
+	text-align: right;
+}
+
+.tight-space {
+	letter-spacing: 1px;
+}
+
+@media (min-width: 768px) and (min-height: 425px) {
+
+  header {
+    align-items: normal;
+    height: calc(50vh - 2rem);
+  }
+
+  .center-buttons {
+  	display: flex;
+
+    a {
+      margin: 0 1rem;
+    }
+  }
+
+  .media-topics {
+    height: calc(50vh - 2rem);
+  }
+
+	.dek {
+		max-width: 55%;
+	}
+}

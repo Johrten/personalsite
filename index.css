@@ -158,14 +158,6 @@ ul{
   text-align: justify;
 }
 
-@keyframes jiggle {
-  0% {transform: rotate(0deg);}
-  /* midway rotate 2deg right */
-  50% {transform: rotate(5deg);}
-  /* end rotate -2deg left */
-  100% {transform: rotate(-5deg);}
-}
-
 #home{
   display: none;
 }

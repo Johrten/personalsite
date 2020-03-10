@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/src/*"
+  [headers.values]
+    cache-control = "public, max-age=10080"
