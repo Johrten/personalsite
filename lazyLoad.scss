@@ -77,7 +77,7 @@ label {
   text-indent: 4%;
 
   &::placeholder {
-    color: $darkBlue;
+    color: white;
     font-family: $roboto;
     font-size: calc(16px + 0.35vw);
     font-weight: 400;
@@ -118,6 +118,6 @@ label {
   label {
     margin: auto;
     max-width: 50%;
-    min-width: 30%;
+    min-width: 40%;
   }
 }
