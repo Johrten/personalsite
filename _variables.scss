@@ -39,46 +39,24 @@
     url('src/roboto-v20-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-@font-face {
-  font-family: 'Metropolis';
-  font-style: normal;
-  font-weight: 600;
-  font-display: fallback;
-  src: local('Metropolis Semibold'), local('Metropolis-SemiBold'),
-    url('src/Metropolis-SemiBold.woff2') format('woff'),
-    url('src/Metropolis-SemiBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-  font-family: 'Metropolis';
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: local('Metropolis Regular'), local('Metropolis-Regular'),
-    url('src/Metropolis-Regular.woff2') format('woff'),
-    url('src/Metropolis-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:1;
-  }
-}
-
-$darkBlue: rgb(14, 8, 69);
-$blue: rgb(64, 104, 206);
-$lightBlue: rgb(181, 223, 229);
+$darkBlue: rgb(5, 8, 41);
+$blue: rgb(98, 131, 214);
+$lightBlue: white;
 
 $metropolis: Metropolis, Helvetica, sans-serif;
 $roboto: Roboto, Helvetica, sans-serif;
 
 .dark-accent {
   color: $darkBlue !important;
+  // text-shadow: -1px 1px 1px $lightBlue;
+}
+
+.uc-link {
+  color: $darkBlue;
+  text-decoration: underline;
 }
 
 .light-accent {
   color: $lightBlue !important;
+  text-shadow: -1px 1px 1px $darkBlue;
 }
