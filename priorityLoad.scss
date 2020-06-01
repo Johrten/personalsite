@@ -1,13 +1,14 @@
 @import "variables";
 
 body {
+	background: $blue;
 	margin: 0;
   overflow-x:hidden;
+	position: relative;
 }
 
 header {
   align-items: center;
-	background: $lightBlue;
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 2rem);
@@ -20,8 +21,8 @@ header {
 }
 
 .header-name {
-	font-size: calc( 48px + 2vw);
-	color: $blue;
+	font-size: calc( 48px + 3vw);
+	color: $darkBlue;
 	font-family: $metropolis;
   margin: 1rem;
 	text-align: center;
@@ -29,9 +30,9 @@ header {
 }
 
 .header-jobs {
-  color: $blue;
+  color: $darkBlue;
   font-family: $metropolis;
-	font-size: calc( 24px + 2vw);
+	font-size: calc( 16px + 3vw);
 	font-weight: 400;
   margin: 1rem;
 	text-align: center;
@@ -116,16 +117,15 @@ header {
 
 #home {
   align-items: center;
-  background-color: $darkBlue;
   display: flex;
 }
 
 .dek {
   animation: fadein 2s;
   -webkit-animation: fadein 2s;
-  color: $blue;
+  color: $darkBlue;
   font-family: $roboto;
-	font-size: calc(32px + 2vw);
+	font-size: calc( 16px + 3vw);
   margin-left: auto;
 	text-align: right;
 }
@@ -154,6 +154,6 @@ header {
   }
 
 	.dek {
-		max-width: 55%;
+		// max-width: 55%;
 	}
 }

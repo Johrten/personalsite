@@ -1,12 +1,12 @@
 @import "variables";
 
 #skills {
-  background-color: $lightBlue;
+  // background-color: $lightBlue;
   justify-content: center;
 }
 
 .section-title {
-	color: $blue;
+	color: $darkBlue;
   font-family: $metropolis;
 	font-size: calc( 32px + 1.5vw);
 	font-weight: 600;
@@ -36,7 +36,7 @@
 }
 
 .skill-header {
-  color: $darkBlue;
+  color: $lightBlue;
   font-family: $roboto;
   font-size: calc( 24px + 1.25vw);
   font-weight: 600;
@@ -44,7 +44,7 @@
 }
 
 .skill {
-  color: $blue;
+  color: $darkBlue;
   font-family: $roboto;
   font-size: calc( 16px + 1vw);
   font-weight: 400;
@@ -52,7 +52,7 @@
 }
 
 #contact {
-  background-color: $darkBlue;
+  // background-color: $darkBlue;
 }
 
 .contact-form {
@@ -61,7 +61,7 @@
 }
 
 label {
-  color: $lightBlue;
+  color: $darkBlue;
   display: flex;
   flex-direction: column;
   font-family: $roboto;
@@ -86,8 +86,8 @@ label {
 }
 
 .submit-btn {
-	color: $blue;
-	background: $lightBlue;
+	color: $lightBlue;
+	background: $darkBlue;
   border: none;
 	border-radius: 1rem;
   font-family: $roboto;
@@ -100,14 +100,35 @@ label {
 }
 
 .js-form-response {
-  color: $lightBlue;
+  color: $darkBlue;
 	display: none;
   font-family: $roboto;
   font-weight: 400;
   text-align: center;
 }
 
+footer {
+  background-color: $darkBlue;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.footnote {
+  color: $lightBlue;
+  font-family: $roboto;
+  font-size: calc(16px + 0.35vw);
+  margin: 0 auto;
+  padding: .5rem
+}
+
 @media (min-width: 768px) and (min-height: 425px) {
+
+  #skills {
+    // background-color: $lightBlue;
+    height: calc(100vh - 2rem);
+    justify-content: center;
+  }
 
   .skill-columns {
     align-items: flex-start;

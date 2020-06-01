@@ -68,17 +68,19 @@
   }
 }
 
-$darkBlue: rgb(14, 8, 69);
-$blue: rgb(64, 104, 206);
-$lightBlue: rgb(181, 223, 229);
+$darkBlue: rgb(5, 8, 41);
+$blue: rgb(98, 131, 214);
+$lightBlue: white;
 
 $metropolis: Metropolis, Helvetica, sans-serif;
 $roboto: Roboto, Helvetica, sans-serif;
 
 .dark-accent {
   color: $darkBlue !important;
+  text-shadow: -1px 1px 1px $lightBlue;
 }
 
 .light-accent {
   color: $lightBlue !important;
+  text-shadow: -1px 1px 1px $darkBlue;
 }
