@@ -2,7 +2,6 @@
 
 body {
 	background: $blue;
-	height: 100vh;
 	margin: 0;
 	position: relative;
 	align-content: center;
@@ -34,21 +33,6 @@ p {
 
 // start of lazyLoad
 
-footer {
-  background-color: $darkBlue;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.footnote {
-  color: $lightBlue;
-  font-family: $roboto;
-  font-size: calc(16px + 0.35vw);
-  margin: 0 auto;
-  padding: .5rem
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -79,6 +63,12 @@ label {
   }
 }
 
+.g-recaptcha {
+	div {
+		margin: 0 auto 1rem auto;
+	}
+}
+
 .submit-btn {
 	color: $lightBlue;
 	background: $darkBlue;
@@ -101,6 +91,19 @@ label {
   text-align: center;
 }
 
+footer {
+  background-color: $darkBlue;
+  width: 100%;
+}
+
+.footnote {
+  color: $lightBlue;
+  font-family: $roboto;
+  font-size: calc(16px + 0.35vw);
+  margin: 0 auto;
+  padding: .5rem
+}
+
 //End of lazyLoad
 
 @media (min-width: 768px) and (min-height: 425px) {
@@ -116,9 +119,18 @@ label {
 		max-width: 50%;
 	}
 
-	label {
+	.media-topics {
+		margin-bottom: 2rem;
+	}
+
+	label, .g-recaptcha {
     margin: auto;
     max-width: 50%;
     min-width: 40%;
   }
+
+	footer {
+		bottom: 0;
+		position: fixed;
+	}
 }
