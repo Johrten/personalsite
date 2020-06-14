@@ -50,7 +50,6 @@
 
 body {
   background: #6283d6;
-  height: 100vh;
   margin: 0;
   position: relative;
   align-content: center;
@@ -78,21 +77,6 @@ p {
 
 .media-topics {
   padding: 1rem;
-}
-
-footer {
-  background-color: #050829;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.footnote {
-  color: white;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: calc(16px + 0.35vw);
-  margin: 0 auto;
-  padding: 0.5rem;
 }
 
 .contact-form {
@@ -124,6 +108,10 @@ label {
   text-indent: 4%;
 }
 
+.g-recaptcha div {
+  margin: 0 auto 1rem auto;
+}
+
 .submit-btn {
   color: white;
   background: #050829;
@@ -146,6 +134,19 @@ label {
   text-align: center;
 }
 
+footer {
+  background-color: #050829;
+  width: 100%;
+}
+
+.footnote {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: calc(16px + 0.35vw);
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
 @media (min-width: 768px) and (min-height: 425px) {
   body {
     display: flex;
@@ -158,10 +159,19 @@ label {
     max-width: 50%;
   }
 
-  label {
+  .media-topics {
+    margin-bottom: 2rem;
+  }
+
+  label, .g-recaptcha {
     margin: auto;
     max-width: 50%;
     min-width: 40%;
+  }
+
+  footer {
+    bottom: 0;
+    position: fixed;
   }
 }
 

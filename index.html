@@ -53,11 +53,10 @@
               Message
               <textarea name="message" placeholder="Message..." class="input input-area" required></textarea>
             </label>
+            <div class="g-recaptcha" data-sitekey="6LeMlqQZAAAAANMaCNh0RPiTfYOG4leIQXhwnXYD"></div>
             <button type="submit" class="submit-btn">Send Message</button>
           </form>
-          <div class="js-form-response">
-            <p class="submit-msg">Thanks for the message. I’ll be in touch shortly!</p>
-          </div>
+          <p class="js-form-response"></p>
         </div>
       </section>
       <footer>
@@ -65,4 +64,5 @@
       </footer>
   </body>
   <script defer src="./index.js" charset="utf-8"></script>
+  <script defer src="https://www.google.com/recaptcha/api.js"></script>
 </html>
