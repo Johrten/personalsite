@@ -1,4 +1,4 @@
 [[headers]]
   for = "/src/*"
   [headers.values]
-    cache-control = "public, max-age=10080"
+    cache-control = "public, max-age=604800"
