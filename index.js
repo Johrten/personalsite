@@ -1,7 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-	 console.log("Hey, funny seeing you here.");
- }
-)
+window.onload = () => {
+  const script = document.createElement("script");
+  script.defer = true;
+  script.src = "https://www.google.com/recaptcha/api.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
 
 const contact = document.querySelector("[data-id='contact']");
 const contactForm = document.querySelector(".form");
