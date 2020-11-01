@@ -41,6 +41,6 @@ contactForm.addEventListener("submit", e => {
 		})
 	} else {
 		formResponse.style.display = 'block'
-		formResponse.innerText = `Please check "I'm not a robot before submitting"`
+		formResponse.innerText = `Please check "I'm not a robot" before submitting`
 	}
 })
