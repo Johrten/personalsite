@@ -8,9 +8,9 @@
     <title>johrten</title>
 
     <link rel="preload" href="priorityLoad.css" as="style">
-    <link rel="preload" href="https://www.google.com/recaptcha/api.js" as="script">
     <link rel="preload" href="/src/roboto-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-
+    
+    <link rel="preconnect" href="https://www.google.com/recaptcha/api.js">
     <link rel="preconnect" href="https://gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://google.com">
@@ -37,7 +37,7 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+    <main>
       <p class="uc-greeting">
         Hello! Thanks for visiting my site.
         My name is <span class="dark-accent">Johrten</span> and I'm a fullstack developer
@@ -57,11 +57,12 @@
         <a href="https://github.com/johrten/" rel="noopener" target="_blank" class="uc-link">
           Github</a>.
       </p>
-    </header>
+    </main>
 
     <section class="media-topics" id="contact">
       <div class="form">
         <form class="contact-form">
+          <p class="js-form-response"></p>
           <label for="full_name">
             Full Name
             <input type="text" name="full_name" placeholder="Name" class="input" required>
@@ -81,8 +82,8 @@
           <div class="g-recaptcha" data-sitekey="6LeMlqQZAAAAANMaCNh0RPiTfYOG4leIQXhwnXYD"></div>
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
-        <p class="js-form-response"></p>
       </div>
+      <br>
     </section>
 
     <footer>
