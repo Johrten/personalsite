@@ -1,13 +1,19 @@
 window.onload = () => {
+}
+
+const contact = document.querySelector("[data-id='contact']");
+const firstNameLabel = document.getElementsByTagName("label")[0];
+const recaptchaPlaceholder = document.getElementsByTagName("img")[0];
+const contactForm = document.querySelector(".form");
+const formResponse = document.querySelector('.js-form-response');
+
+firstNameLabel.addEventListener("click", () => {
+  recaptchaPlaceholder.style.display="none";
   const script = document.createElement("script");
   script.defer = true;
   script.src = "https://www.google.com/recaptcha/api.js";
   document.getElementsByTagName("head")[0].appendChild(script);
-}
-
-const contact = document.querySelector("[data-id='contact']");
-const contactForm = document.querySelector(".form");
-const formResponse = document.querySelector('.js-form-response');
+})
 
 contactForm.addEventListener("submit", e => {
   e.preventDefault();
