@@ -114,8 +114,6 @@ footer {
   padding: .5rem
 }
 
-//End of lazyLoad
-
 @media (min-width: 768px) and (min-height: 425px) {
 
 	body {
@@ -135,12 +133,23 @@ footer {
 
 	.contact-form {
     margin: auto;
-    max-width: 50%;
-    min-width: 40%;
+    max-width: 496px;
   }
 
 	footer {
 		bottom: 0;
 		position: fixed;
+	}
+}
+
+@media (min-width: 1440px) and (min-height: 920px) {
+
+  body {
+    height: 100vh;
+  }
+
+	.uc-greeting, .uc-social {
+		margin: auto;
+		max-width: 50%;
 	}
 }
