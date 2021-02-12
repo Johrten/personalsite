@@ -2,12 +2,11 @@ window.onload = () => {
 }
 
 const contact = document.querySelector("[data-id='contact']");
-const firstNameLabel = document.getElementsByTagName("label")[0];
 const recaptchaPlaceholder = document.getElementsByTagName("img")[0];
 const contactForm = document.querySelector(".form");
 const formResponse = document.querySelector('.js-form-response');
 
-firstNameLabel.addEventListener("click", () => {
+contactForm.addEventListener("click", () => {
   recaptchaPlaceholder.style.display="none";
   const script = document.createElement("script");
   script.defer = true;
@@ -46,7 +45,8 @@ contactForm.addEventListener("submit", e => {
 			}
 		})
 	} else {
-		formResponse.style.display = 'block'
+    formResponse.style.display = 'block'
+    formResponse.style.color = 'red'
 		formResponse.innerText = `Please check "I'm not a robot" before submitting`
 	}
 })

@@ -35,21 +35,24 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 .dark-accent {
-  color: #050829 !important;
+  color: #303030 !important;
 }
 
 .uc-link {
-  color: #050829;
+  color: #303030;
   text-decoration: underline;
 }
 
 .light-accent {
   color: white !important;
-  text-shadow: -1px 1px 1px #050829;
+  text-shadow: -1px 1px 1px #303030;
+}
+
+html {
+  background: linear-gradient(135deg, #89c4eb 55%, rgba(255, 255, 255, 0.05));
 }
 
 body {
-  background: #6283d6;
   margin: 0;
   position: relative;
   align-content: center;
@@ -61,6 +64,11 @@ p {
 }
 
 .uc-greeting {
+  margin: 1rem auto 1rem auto;
+  width: fit-content;
+}
+
+.uc-bio {
   color: white;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
@@ -79,37 +87,75 @@ p {
   padding: 1rem;
 }
 
+.uc-greeting {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: calc(96px + 1vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
 .contact-form {
-  background-color: white;
-  border-radius: 1rem;
+  background: #89c4eb;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 4px #303030, -4px -4px 8px white;
   display: flex;
-  box-shadow: 0px 8px 20px 1px #050829;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 label {
-  color: #050829;
   display: flex;
   flex-direction: column;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
   font-weight: 400;
+  position: relative;
+}
+
+.test {
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 18px;
+  transition: 0.2s ease all;
 }
 
 .input {
-  border: solid #050829 1px;
-  border-radius: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #303030;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: calc(16px + 0.35vw);
   line-height: calc(22px + 1.05vw);
   margin: 1rem;
   text-indent: 4%;
 }
-.input::placeholder {
-  color: white;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: calc(16px + 0.35vw);
-  font-weight: 400;
-  text-indent: 4%;
+
+input:focus {
+  outline: none;
+}
+
+input:focus ~ .test,
+input:not(:focus):valid ~ .test {
+  color: #303030;
+  top: -8px;
+}
+
+textarea {
+  height: 1.5em;
+  transition: 0.2s ease all;
+}
+
+textarea:focus {
+  height: 4em;
+  outline: none;
+}
+
+textarea:focus ~ .test,
+textarea:not(:focus):valid ~ .test {
+  color: #303030;
+  top: -8px;
 }
 
 .recaptcha-placeholder {
@@ -123,7 +169,7 @@ label {
 
 .submit-btn {
   color: white;
-  background: #050829;
+  background: #303030;
   border: none;
   border-radius: 1rem;
   font-family: Roboto, Helvetica, sans-serif;
@@ -135,16 +181,29 @@ label {
   width: fit-content;
 }
 
+.submit-btn:hover {
+  cursor: pointer;
+}
+
+.submit-btn:active {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
 .js-form-response {
-  color: #050829;
+  color: #303030;
   display: none;
   font-family: Roboto, Helvetica, sans-serif;
+  font-size: calc(12px + 0.25vw);
   font-weight: 400;
   text-align: center;
 }
 
 footer {
-  background-color: #050829;
+  background-color: #303030;
   width: 100%;
 }
 
@@ -157,13 +216,22 @@ footer {
 }
 
 @media (min-width: 768px) and (min-height: 425px) {
+  html {
+    height: 100vh;
+  }
+
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .uc-greeting, .uc-social {
+  .uc-greeting {
+    margin: auto;
+    max-width: 82%;
+  }
+
+  .uc-bio, .uc-social {
     margin: auto;
     max-width: 66.6%;
   }
@@ -187,9 +255,19 @@ footer {
     height: 100vh;
   }
 
-  .uc-greeting, .uc-social {
+  .uc-greeting, .uc-bio, .uc-social {
     margin: auto;
     max-width: 50%;
+  }
+}
+@media (min-height: 790px) {
+  html {
+    height: 100vh;
+  }
+
+  footer {
+    bottom: 0;
+    position: fixed;
   }
 }
 

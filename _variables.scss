@@ -39,16 +39,14 @@
     url('src/roboto-v20-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-$darkBlue: rgb(5, 8, 41);
-$blue: rgb(98, 131, 214);
-$lightBlue: white;
+$darkBlue: rgb(48, 48, 48);
+$blue: rgb(137, 196, 235);
+$lightBlue: rgb(255, 255, 255);
 
-$metropolis: Metropolis, Helvetica, sans-serif;
 $roboto: Roboto, Helvetica, sans-serif;
 
 .dark-accent {
   color: $darkBlue !important;
-  // text-shadow: -1px 1px 1px $lightBlue;
 }
 
 .uc-link {
