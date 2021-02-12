@@ -113,7 +113,7 @@ label {
   position: relative;
 }
 
-.test {
+.animated-label {
   position: absolute;
   pointer-events: none;
   left: 15px;
@@ -136,8 +136,8 @@ input:focus {
   outline: none;
 }
 
-input:focus ~ .test,
-input:not(:focus):valid ~ .test {
+input:focus ~ .animated-label,
+input:not(:focus):valid ~ .animated-label {
   color: #303030;
   top: -8px;
 }
@@ -152,8 +152,8 @@ textarea:focus {
   outline: none;
 }
 
-textarea:focus ~ .test,
-textarea:not(:focus):valid ~ .test {
+textarea:focus ~ .animated-label,
+textarea:not(:focus):valid ~ .animated-label {
   color: #303030;
   top: -8px;
 }
