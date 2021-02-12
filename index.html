@@ -9,6 +9,8 @@
 
     <link rel="preload" href="priorityLoad.css" as="style">
     <link rel="preload" href="/src/roboto-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/roboto-v20-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
+
     
     <!-- <link rel="preconnect" href="https://www.google.com/recaptcha/">
     <link rel="preconnect" href="https://gstatic.com">
@@ -38,15 +40,16 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <main>
-      <p class="uc-greeting">
-        Hello! Thanks for visiting my site.
-        My name is <span class="dark-accent">Johrten</span> and I'm a fullstack developer
+      <h1 class="uc-greeting">Hello!</h1>
+      <p class="uc-bio">
+        And thanks for visiting my site.
+        My name is <span class="dark-accent">Johrten</span> and I'm a fullstack developer in New York City
         focused on building <span class="dark-accent">engaging</span> experiences with
         <span class="dark-accent">seamless</span> solutions. Although I strive for minimalism,
         this site is a little empty. Bear with me while it's
         under construction and feel free to send me a message
         using the contact form below. Let's talk media, Javascript,
-        PHP, React, Ruby (on Rails), AWS, or share our favorite cocktail
+        PHP, React, Ruby (on Rails), AWS, Wordpress, or share our favorite cocktail
         recipes (mine has jalapeño).
       </p>
       <p class="uc-social">
@@ -64,20 +67,16 @@
         <form class="contact-form">
           <p class="js-form-response"></p>
           <label for="full_name">
-            Full Name
-            <input type="text" name="full_name" placeholder="Name" class="input" required>
-          </label>
-          <label for="company">
-            Company - Optional
-            <input type="text" name="company" placeholder="Company - Optional" class="input">
+            <input type="text" name="full_name" placeholder=" " class="input" required>
+            <span class="animated-label">Full Name</span>
           </label>
           <label for="reply_to">
-            Email
-            <input type="email" name="reply_to" placeholder="Email" class="input" required>
+            <input type="email" name="reply_to" placeholder=" " class="input" required>
+            <span class="animated-label">Email</span>
           </label>
           <label for="message">
-            Message
-            <textarea name="message" placeholder="Message..." class="input input-area" required></textarea>
+            <textarea name="message" placeholder=" " class="input input-area" required></textarea>
+            <span class="animated-label">Message</span>
           </label>
           <img
             class="recaptcha-placeholder"
@@ -95,7 +94,7 @@
     </section>
 
     <footer>
-      <p class="footnote">© 2020 Johrten</p>
+      <p class="footnote">© 2021 Johrten</p>
     </footer>
 
   </body>
