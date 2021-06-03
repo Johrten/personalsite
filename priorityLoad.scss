@@ -1,23 +1,22 @@
 @import "variables";
 
 html {
-  background: linear-gradient(135deg, rgba(137, 196, 235) 55%, rgba(255,255,255,0.05));
+  background: linear-gradient(135deg, $primary 55%, rgba(109, 255, 255, 1));
 }
 
 body {
+	align-content: center;
 	margin: 0;
 	position: relative;
-	align-content: center;
+}
+
+main {
+  cursor: default;
 }
 
 p {
 	padding: 1rem;
 	margin: 0;
-}
-
-.uc-greeting {
-  margin: 1rem auto 1rem auto;
-  width: fit-content;
 }
 
 .uc-bio {
@@ -40,23 +39,36 @@ p {
 }
 
 .uc-greeting {
-  color: $lightBlue;
+  color: $accent;
   font-family: $roboto;
   font-size: calc(96px + 1vw);
   font-style: italic;
   font-weight: 700;
+  margin: 1rem auto 1rem auto;
+  text-shadow: 3px 3px 0px $secondary;
+  width: fit-content;
+}
+
+.uc-link {
+  color: $accent;
+  text-decoration: underline;
+}
+
+.uc-link:active {
+  color: $interactive;
 }
 
 .contact-form {
-  background: $blue;
+  background: $primary;
   border-radius: 2rem;
-  box-shadow:  2px 2px 4px $darkBlue,  -4px -4px 8px $lightBlue;
+  box-shadow:  2px 2px 4px $secondary,  -4px -4px 8px $accent;
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
 label {
+  color: white;
   display: flex;
   flex-direction: column;
   font-family: $roboto;
@@ -76,7 +88,7 @@ label {
 .input {
   background: transparent;
   border: none;
-  border-bottom: 1px solid $darkBlue;
+  border-bottom: 1px solid $secondary;
   font-family: $roboto;
   font-size: calc(16px + 0.35vw);
   line-height: calc(22px + 1.05vw);
@@ -90,7 +102,7 @@ input:focus {
 
 input:focus ~ .animated-label,
 input:not(:focus):valid ~ .animated-label {
-  color: $darkBlue;
+  color: $interactive;
   top: -8px;
 }
 
@@ -106,7 +118,7 @@ textarea:focus {
 
 textarea:focus ~ .animated-label,
 textarea:not(:focus):valid ~ .animated-label {
-  color: $darkBlue;
+  color: $interactive;
   top: -8px;
 }
 
@@ -122,8 +134,8 @@ textarea:not(:focus):valid ~ .animated-label {
 }
 
 .submit-btn {
-	color: $lightBlue;
-	background: $darkBlue;
+	color: $accent;
+	background: $secondary;
   border: none;
 	border-radius: 1rem;
   font-family: $roboto;
@@ -140,7 +152,8 @@ textarea:not(:focus):valid ~ .animated-label {
 }
 
 .submit-btn:active {
-  background: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+  // background: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+  background: $interactive;
 }
 
 .submit-btn:focus{
@@ -148,7 +161,7 @@ textarea:not(:focus):valid ~ .animated-label {
 }
 
 .js-form-response {
-  color: $darkBlue;
+  color: $secondary;
 	display: none;
   font-family: $roboto;
   font-size: calc(12px + 0.25vw);
@@ -157,16 +170,38 @@ textarea:not(:focus):valid ~ .animated-label {
 }
 
 footer {
-  background-color: $darkBlue;
+  background-color: $secondary;
   width: 100%;
 }
 
 .footnote {
-  color: $lightBlue;
+  color: $accent;
   font-family: $roboto;
   font-size: calc(16px + 0.35vw);
   margin: 0 auto;
   padding: .5rem
+}
+
+.dot {
+  background: $interactive;
+  height: 0px;
+  width: 0px;
+  -webkit-transition-duration: 1.5s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  border-radius: 100%;
+  padding: 1px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.pretty {
+  height: 100px;
+  width: 100px;
+}
+
+.pretty-fade {
+  opacity: 0;
 }
 
 @media (min-width: 768px) and (min-height: 425px) {
@@ -201,6 +236,7 @@ footer {
   }
 
 	footer {
+    background: linear-gradient(135deg, $secondary 0%, rgba(109, 255, 255, 0) 50%);
 		bottom: 0;
 		position: fixed;
 	}
