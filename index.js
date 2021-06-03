@@ -3,7 +3,7 @@ window.onload = () => {
 
 const contact = document.querySelector("[data-id='contact']");
 const recaptchaPlaceholder = document.getElementsByTagName("img")[0];
-const contactForm = document.querySelector(".form");
+const contactForm = document.querySelector("form");
 const formResponse = document.querySelector('.js-form-response');
 
 contactForm.addEventListener("click", () => {
@@ -50,3 +50,20 @@ contactForm.addEventListener("submit", e => {
 		formResponse.innerText = `Please check "I'm not a robot" before submitting`
 	}
 })
+
+document.addEventListener('click', e => {
+  if (contactForm === e.target || contactForm.contains(e.target)) return;
+  let dot = document.createElement("div");
+    dot.className = "dot";
+    dot.style.left = (e.pageX) + "px";
+    dot.style.top = (e.pageY) + "px";
+    dot.style.position = 'absolute';
+    document.body.appendChild(dot);
+    setTimeout(()=>{
+      dot.classList.add('pretty');
+    }, 25);
+    setTimeout(()=>{
+      dot.classList.add('pretty-fade');
+    }, 750);
+})
+

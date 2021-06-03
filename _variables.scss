@@ -39,22 +39,18 @@
     url('src/roboto-v20-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-$darkBlue: rgb(48, 48, 48);
-$blue: rgb(137, 196, 235);
-$lightBlue: rgb(255, 255, 255);
+$secondary: rgb(105, 23, 156);
+$primary: rgb(107 , 49, 204);
+$accent: rgb(109, 255, 255);
+$interactive: rgb(255, 225, 109);
 
 $roboto: Roboto, Helvetica, sans-serif;
 
 .dark-accent {
-  color: $darkBlue !important;
-}
-
-.uc-link {
-  color: $darkBlue;
-  text-decoration: underline;
+  color: $accent !important;
 }
 
 .light-accent {
-  color: $lightBlue !important;
-  text-shadow: -1px 1px 1px $darkBlue;
+  color: $accent !important;
+  text-shadow: -1px 1px 1px $secondary;
 }
