@@ -57,7 +57,7 @@ document.addEventListener('click', e => {
     dot.className = "dot";
     dot.style.left = (e.pageX) + "px";
     dot.style.top = (e.pageY) + "px";
-    dot.style.position = 'absolute';
+    dot.style.position = 'fixed';
     document.body.appendChild(dot);
     setTimeout(()=>{
       dot.classList.add('pretty');
