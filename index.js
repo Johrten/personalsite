@@ -53,12 +53,13 @@ contactForm.addEventListener("submit", e => {
 
 document.addEventListener('click', e => {
   if (contactForm === e.target || contactForm.contains(e.target)) return;
+  const dotArea = document.getElementsByClassName("dot-wrapper")[0];
   let dot = document.createElement("div");
     dot.className = "dot";
     dot.style.left = (e.pageX) + "px";
     dot.style.top = (e.pageY) + "px";
-    dot.style.position = 'fixed';
-    document.body.appendChild(dot);
+    dot.style.position = 'absolute';
+    dotArea.appendChild(dot);
     setTimeout(()=>{
       dot.classList.add('pretty');
     }, 25);

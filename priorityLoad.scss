@@ -1,21 +1,20 @@
 @import "variables";
 
 html {
-  animation: gradient 17s ease infinite;
+  animation: gradient 6s ease forwards;
   background: linear-gradient(135deg, $primary 55%, rgba(109, 255, 255, 1));
   background-size: 150% 150%;
-  // background-position: 0% 0%;
 }
 
 @keyframes gradient {
 	0% {
 		background-position: 0% 0%;
 	}
-	50% {
-		background-position: 90% 90%;
-	}
+	// 50% {
+	// 	background-position: 0% 0%;
+	// }
 	100% {
-		background-position: 0% 0%;
+		background-position: 90% 90%;
 	}
 }
 
@@ -195,6 +194,15 @@ footer {
   font-size: calc(16px + 0.35vw);
   margin: 0 auto;
   padding: .5rem
+}
+
+.dot-wrapper {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .dot {
