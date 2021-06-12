@@ -44,7 +44,7 @@
 }
 
 html {
-  animation: gradient 17s ease infinite;
+  animation: gradient 6s ease forwards;
   background: linear-gradient(135deg, #6b31cc 55%, #6dffff);
   background-size: 150% 150%;
 }
@@ -53,11 +53,8 @@ html {
   0% {
     background-position: 0% 0%;
   }
-  50% {
-    background-position: 90% 90%;
-  }
   100% {
-    background-position: 0% 0%;
+    background-position: 90% 90%;
   }
 }
 body {
@@ -233,6 +230,15 @@ footer {
   font-size: calc(16px + 0.35vw);
   margin: 0 auto;
   padding: 0.5rem;
+}
+
+.dot-wrapper {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .dot {
