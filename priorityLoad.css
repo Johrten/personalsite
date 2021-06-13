@@ -72,14 +72,14 @@ p {
   margin: 0;
 }
 
-.uc-bio {
+.bio {
   color: white;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
   font-weight: 400;
 }
 
-.uc-social {
+.social {
   color: white;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
@@ -87,11 +87,11 @@ p {
   padding-top: 0;
 }
 
-.media-topics {
+.contact-wrapper {
   padding: 1rem;
 }
 
-.uc-greeting {
+.greeting {
   color: #6dffff;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(96px + 1vw);
@@ -102,12 +102,12 @@ p {
   width: fit-content;
 }
 
-.uc-link {
+.link {
   color: #6dffff;
   text-decoration: underline;
 }
 
-.uc-link:active {
+.link:active {
   color: #ffe16d;
 }
 
@@ -142,6 +142,7 @@ label {
   background: transparent;
   border: none;
   border-bottom: 1px solid #69179c;
+  color: white;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
   line-height: calc(22px + 1.05vw);
@@ -264,27 +265,23 @@ footer {
 }
 
 @media (min-width: 768px) and (min-height: 425px) {
-  html {
-    height: 100vh;
-  }
-
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .uc-greeting {
+  .greeting {
     margin: auto;
     max-width: 82%;
   }
 
-  .uc-bio, .uc-social {
+  .bio, .social {
     margin: auto;
     max-width: 66.6%;
   }
 
-  .media-topics {
+  .contact-wrapper {
     margin-bottom: 2rem;
   }
 
@@ -299,16 +296,6 @@ footer {
     position: fixed;
   }
 }
-@media (min-width: 1440px) and (min-height: 920px) {
-  body {
-    height: 100vh;
-  }
-
-  .uc-greeting, .uc-bio, .uc-social {
-    margin: auto;
-    max-width: 50%;
-  }
-}
 @media (min-height: 790px) {
   html {
     height: 100vh;
@@ -317,6 +304,16 @@ footer {
   footer {
     bottom: 0;
     position: fixed;
+  }
+}
+@media (min-width: 1440px) and (min-height: 920px) {
+  body {
+    height: 100vh;
+  }
+
+  .greeting, .bio, .social {
+    margin: auto;
+    max-width: 50%;
   }
 }
 
