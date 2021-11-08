@@ -67,9 +67,24 @@ main {
   cursor: default;
 }
 
-p {
+.about {
   padding: 1rem;
   margin: 0;
+}
+.about p {
+  margin-top: 0;
+}
+
+.my-face {
+  float: left;
+  height: auto;
+  margin-right: 1rem;
+  padding-top: 1rem;
+}
+.my-face img {
+  display: block;
+  margin: auto;
+  max-width: 100px;
 }
 
 .bio {
@@ -77,6 +92,8 @@ p {
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
   font-weight: 400;
+  margin: 0;
+  text-align: justify;
 }
 
 .social {
@@ -84,7 +101,8 @@ p {
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(16px + 0.35vw);
   font-weight: 400;
-  padding-top: 0;
+  padding: 0 1rem 1rem 1rem;
+  margin: 0;
 }
 
 .contact-wrapper {
@@ -276,7 +294,7 @@ footer {
     max-width: 82%;
   }
 
-  .bio, .social {
+  .about, .social {
     margin: auto;
     max-width: 66.6%;
   }
@@ -311,9 +329,13 @@ footer {
     height: 100vh;
   }
 
-  .greeting, .bio, .social {
+  .greeting, .about, .social {
     margin: auto;
     max-width: 50%;
+  }
+
+  .social {
+    padding-left: 100px;
   }
 }
 

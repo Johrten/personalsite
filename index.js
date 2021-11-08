@@ -9,7 +9,6 @@ contactForm.addEventListener("click", function () {
     document.getElementsByTagName("head")[0].appendChild(script);
 });
 contactForm.addEventListener("submit", function (e) {
-    alert('hi');
     e.preventDefault();
     var formResponse = document.querySelector('.js-form-response');
     console.log(e.target);
@@ -29,18 +28,13 @@ contactForm.addEventListener("submit", function (e) {
             if (!r.ok) {
                 throw Error(r.statusText);
             }
-            return r;
-        }).then(function (r) {
-            if (r.status === 200) {
-                formResponse.style.display = 'block';
-                formResponse.innerText = "Thanks for the message. I\u2019ll be in touch shortly!";
-                target_1.reset();
-                history.pushState("id", "johrten", 'https://www.johrten.com/');
-            }
-            else {
-                formResponse.style.display = 'block';
-                formResponse.innerText = 'Something went wrong';
-            }
+            formResponse.style.display = 'block';
+            formResponse.innerText = "Thanks for the message. I\u2019ll be in touch shortly!";
+            target_1.reset();
+            history.pushState("id", "johrten", 'https://www.johrten.com/');
+        })["catch"](function (error) {
+            formResponse.style.display = 'block';
+            formResponse.innerText = 'Something went wrong';
         });
     }
     else {
