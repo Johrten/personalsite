@@ -45,7 +45,7 @@
 
 html {
   animation: gradient 7s linear infinite;
-  background: linear-gradient(135deg, #daccff 45%, #d4ffff);
+  background: linear-gradient(135deg, #fdccff 45%, #d4ffff);
   background-size: 150% 150%;
 }
 
@@ -132,7 +132,7 @@ main {
 }
 
 .contact-form {
-  background: #daccff;
+  background: #fdccff;
   border-radius: 2rem;
   box-shadow: 2px 2px 4px #6b31cc, -4px -4px 8px #d4ffff;
   display: flex;
