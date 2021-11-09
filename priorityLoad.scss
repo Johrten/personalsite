@@ -303,10 +303,6 @@ footer {
 
 @media (min-width: 1280px) and (min-height: 920px) {
 
-  body {
-    height: 100vh;
-  }
-
   .my-face {
     float: none;
     margin-bottom: 1rem;
@@ -322,9 +318,13 @@ footer {
   }
 }
 
-// @media (min-width: 2110px) {
+@media (min-width: 2110px) and (min-height: 1200px) {
 
-//   .bio {
-//     padding-left: 116px;
-//   }
-// }
+  body {
+    height: 100vh;
+  }
+
+  // .bio {
+  //   padding-left: 116px;
+  // }
+}
