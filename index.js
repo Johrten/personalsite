@@ -1,7 +1,7 @@
 var contactForm = document.querySelector("form");
 var grecaptcha;
 contactForm.addEventListener("click", function () {
-    var recaptchaPlaceholder = document.getElementsByTagName("img")[0];
+    var recaptchaPlaceholder = document.getElementById("recaptcha-placeholder");
     recaptchaPlaceholder.style.display = "none";
     var script = document.createElement("script");
     script.defer = true;

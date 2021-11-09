@@ -1,8 +1,8 @@
 @import "variables";
 
 html {
-  animation: gradient 6s ease forwards;
-  background: linear-gradient(135deg, $primary 55%, rgba(109, 255, 255, 1));
+  animation: gradient 7s linear infinite;
+  background: linear-gradient(135deg, $primary 45%, $accent);
   background-size: 150% 150%;
 }
 
@@ -10,11 +10,11 @@ html {
 	0% {
 		background-position: 0% 0%;
 	}
-	// 50% {
-	// 	background-position: 0% 0%;
-	// }
-	100% {
+	50% {
 		background-position: 90% 90%;
+	}
+	100% {
+		background-position: 0% 0%;
 	}
 }
 
@@ -28,8 +28,19 @@ main {
   cursor: default;
 }
 
+.greeting {
+  color: $secondary;
+  font-family: $roboto;
+  font-size: calc(96px + 1vw);
+  font-style: italic;
+  font-weight: 700;
+  margin: .5rem auto;
+  text-shadow: 3px 3px 0px white;
+  width: fit-content;
+}
+
 .about {
-  padding: 1rem;
+  padding: 0 1rem;
   margin: 0;
 
   p {
@@ -41,7 +52,6 @@ main {
   float: left;
   height: auto;
   margin-right: 1rem;
-  padding-top: 1rem;
 
   img {
     display: block;
@@ -51,7 +61,7 @@ main {
 }
 
 .bio {
-	color: white;
+	color: black;
 	font-family: $roboto;
 	font-size: calc(16px + 0.35vw);
 	font-weight: 400;
@@ -60,7 +70,7 @@ main {
 }
 
 .social {
-	color: white;
+	color: black;
 	font-family: $roboto;
 	font-size: calc(16px + 0.35vw);
 	font-weight: 400;
@@ -69,22 +79,11 @@ main {
 }
 
 .contact-wrapper {
-	padding: 1rem;
-}
-
-.greeting {
-  color: $accent;
-  font-family: $roboto;
-  font-size: calc(96px + 1vw);
-  font-style: italic;
-  font-weight: 700;
-  margin: 1rem auto 1rem auto;
-  text-shadow: 3px 3px 0px $secondary;
-  width: fit-content;
+	padding: 1rem 1rem 2rem 1rem;
 }
 
 .link {
-  color: $accent;
+  color: $secondary;
   text-decoration: underline;
 }
 
@@ -102,7 +101,7 @@ main {
 }
 
 label {
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   font-family: $roboto;
@@ -123,7 +122,7 @@ label {
   background: transparent;
   border: none;
   border-bottom: 1px solid $secondary;
-  color: white;
+  color: black;
   font-family: $roboto;
   font-size: calc(16px + 0.35vw);
   line-height: calc(22px + 1.05vw);
@@ -157,7 +156,7 @@ textarea:not(:focus):valid ~ .animated-label {
   top: -8px;
 }
 
-.recaptcha-placeholder {
+#recaptcha-placeholder {
   margin: 0 auto 1rem;
   width: fit-content;
 }
@@ -221,7 +220,7 @@ footer {
   height: 100%;
   overflow: hidden;
   position: absolute;
-  top: 0;
+  top: -1rem;
   width: 100%;
   z-index: -1;
 }
@@ -284,6 +283,10 @@ footer {
 		bottom: 0;
 		position: fixed;
 	}
+
+  .dot-wrapper {
+    top: 0;
+  }
 }
 
 @media (min-height: 790px) {
@@ -298,10 +301,15 @@ footer {
 	}
 }
 
-@media (min-width: 1440px) and (min-height: 920px) {
+@media (min-width: 1280px) and (min-height: 920px) {
 
   body {
     height: 100vh;
+  }
+
+  .my-face {
+    float: none;
+    margin-bottom: 1rem;
   }
 
 	.greeting, .about, .social {
@@ -313,3 +321,10 @@ footer {
     padding-left: 100px;
   }
 }
+
+// @media (min-width: 2110px) {
+
+//   .bio {
+//     padding-left: 116px;
+//   }
+// }

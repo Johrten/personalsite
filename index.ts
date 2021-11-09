@@ -2,7 +2,7 @@ const contactForm = document.querySelector("form");
 let grecaptcha: any;
 
 contactForm.addEventListener("click", () => {
-  const recaptchaPlaceholder = document.getElementsByTagName("img")[0];
+  const recaptchaPlaceholder = document.getElementById("recaptcha-placeholder");
   recaptchaPlaceholder.style.display="none";
   const script = document.createElement("script");
   script.defer = true;

@@ -39,15 +39,17 @@
     url('src/roboto-v20-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-$secondary: rgb(105, 23, 156);
-$primary: rgb(107 , 49, 204);
-$accent: rgb(109, 255, 255);
+$secondary: rgb(107, 49, 204);
+$primary: rgb(218, 204, 255);
+$accent: rgb(212, 255, 255);
 $interactive: rgb(255, 225, 109);
+$blackish: rgb(61, 61, 61);
+
 
 $roboto: Roboto, Helvetica, sans-serif;
 
 .dark-accent {
-  color: $accent !important;
+  color: $secondary !important;
 }
 
 .light-accent {
