@@ -2,7 +2,7 @@ const contactForm = document.querySelector("form");
 let grecaptcha: any;
 
 contactForm.addEventListener("click", () => {
-  const recaptchaPlaceholder = document.getElementsByTagName("img")[0];
+  const recaptchaPlaceholder = document.getElementById("recaptcha-placeholder");
   recaptchaPlaceholder.style.display="none";
   const script = document.createElement("script");
   script.defer = true;
@@ -11,7 +11,6 @@ contactForm.addEventListener("click", () => {
 })
 
 contactForm.addEventListener("submit", (e: Event) => {
-  alert('hi')
   e.preventDefault();
   const formResponse: HTMLElement = document.querySelector('.js-form-response');
   console.log(e.target)
@@ -32,18 +31,14 @@ contactForm.addEventListener("submit", (e: Event) => {
 			if (!r.ok) {
 				throw Error(r.statusText)
 			}
-			return r;
-		}).then(r => {
-			if (r.status===200) {
-				formResponse.style.display = 'block'
-				formResponse.innerText = `Thanks for the message. I’ll be in touch shortly!`
-				target.reset();
-				history.pushState("id", "johrten", 'https://www.johrten.com/')
-			} else {
-				formResponse.style.display = 'block'
-				formResponse.innerText = 'Something went wrong'
-			}
-		})
+			formResponse.style.display = 'block'
+      formResponse.innerText = `Thanks for the message. I’ll be in touch shortly!`
+      target.reset();
+      history.pushState("id", "johrten", 'https://www.johrten.com/')
+		}).catch(error => {
+        formResponse.style.display = 'block';
+			  formResponse.innerText = 'Something went wrong';
+    })
 	} else {
     formResponse.style.display = 'block'
     formResponse.style.color = 'red'

@@ -47,30 +47,47 @@
     <!-- End Google Tag Manager (noscript) -->
     <main>
       <h1 class="greeting">Hello!</h1>
-      <p class="bio">
-        And thanks for visiting my site.
-        My name is <span class="dark-accent">Johrten</span> and I'm a developer in New York City
-        focused on building <span class="dark-accent">engaging</span> experiences with
-        <span class="dark-accent">seamless</span> solutions. Although I strive for minimalism,
-        this site is a little empty. Bear with me while it's
-        under construction and feel free to send me a message
-        using the contact form below. Let's talk media, Javascript,
-        PHP, React, Ruby (on Rails), AWS, Wordpress, or share our favorite cocktail
-        recipes (mine has jalapeño).
-      </p>
-      <p class="social">
-        You can also connect with me on
-        <a href="https://linkedin.com/in/johrten/" rel="noopener" target="_blank" class="link">
-          Linkedin</a> or see what I've
-        been up to on
-        <a href="https://github.com/johrten/" rel="noopener" target="_blank" class="link">
-          Github</a>.
-      </p>
+      <div class="about">
+        <div class="my-face">
+          <picture>
+            <source srcset="src/memoji.webp" type="image/webp">
+            <source srcset="src/memoji.png" type="image/png">
+            <img
+            src="src/memoji.png"
+            alt="This is a memoji of me!"
+            loading="lazy"
+            height="123"
+            width="100"
+            >
+          </picture>
+        </div>
+        <div class="bio">
+          <p>
+            And thanks for visiting my site.
+            My name is <span class="dark-accent">Johrten</span> and I'm a developer in New York City
+            focused on building <span class="dark-accent">engaging</span> experiences with
+            <span class="dark-accent">seamless</span> solutions. Although I strive for minimalism,
+            this site is a little empty. Bear with me while it's
+            under construction and feel free to send me a message
+            using the contact form below. Let's talk media, Javascript,
+            PHP, React, Node, AWS, Wordpress, or share our favorite cocktail
+            recipes (mine has jalapeño).
+          </p>
+          <p>
+            You can also connect with me on
+            <a href="https://linkedin.com/in/johrten/" rel="noopener" target="_blank" class="link">
+              Linkedin</a> or see what I've
+            been up to on
+            <a href="https://github.com/johrten/" rel="noopener" target="_blank" class="link">
+              Github</a>.
+          </p>
+        </div>
+      </div>
     </main>
 
     <section class="contact-wrapper" id="contact">
       <div class="form">
-        <form class="contact-form">
+        <form class="contact-form" role="form" aria-label="contact-form">
           <p class="js-form-response"></p>
           <label for="full_name">
             <input type="text" name="full_name" placeholder=" " class="input" required>
@@ -85,7 +102,7 @@
             <span class="animated-label">Message</span>
           </label>
           <img
-            class="recaptcha-placeholder"
+            id="recaptcha-placeholder"
             src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
             loading="lazy"
             height="48"
