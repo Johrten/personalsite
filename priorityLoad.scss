@@ -1,10 +1,10 @@
 @import "variables";
 
-html {
-  animation: gradient 7s linear infinite;
-  background: linear-gradient(135deg, $primary 45%, $accent);
-  background-size: 150% 150%;
-}
+// html {
+//   animation: gradient 7s linear infinite;
+//   background: linear-gradient(135deg, $primary 45%, $accent);
+//   background-size: 150% 150%;
+// }
 
 @keyframes gradient {
 	0% {
@@ -28,19 +28,186 @@ main {
   cursor: default;
 }
 
-.greeting {
-  color: $secondary;
+p {
+  color: $blackish;
   font-family: $roboto;
-  font-size: calc(96px + 1vw);
-  font-style: italic;
+}
+
+.navbar {
+  align-items: center;
+  background-color: white;
+  color: $blackish;
+  display: flex;
+  font-family: $roboto;
+  // justify-content: space-between;
+  padding: 16px;
+  position: sticky;
+  top: 0px;
+  width: calc(100vw - 32px);
+  z-index: 1;
+}
+// // // // // // // // // //// // // // //// // // // //// // // // //
+
+.mobile-menu {
+  display: block;
+  // position: relative;
+}
+
+.hamburger {
+  display: block;
+  height: 23px;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #333;
+}
+
+.line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+// .menu-items {
+//   padding-top: 100px;
+//   background: #fff;
+//   height: 100vh;
+//   transform: translate(-150%);
+//   display: flex;
+//   flex-direction: column;
+//   margin-left: -40px;
+//   padding-left: 50px;
+//   transition: transform 0.5s ease-in-out;
+//   box-shadow: 5px 0px 10px 0px #aaa;
+//   width: 100vw;
+// }
+
+.mobile-menu-popup {
+  display: none;
+}
+
+.mobile-menu-popup-active {
+  background: white;
+  display: block;
+  right: 0;
+  height: 100vh;
+  opacity: .7;
+  position: absolute;
+  transform: translateX(0);
+  top: 65px;
+  width: 50vw;
+}
+
+.menu-items li {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.hamburger-active {
+
+  .line1 {
+    transform: rotate(45deg) scaleX(.85);
+  }
+  
+  .line2 {
+    transform: scaleY(0);
+  }
+  
+  .line3 {
+    transform: rotate(-45deg) scaleX(.85);
+  }
+}
+
+// // // // // // // // // //// // // // //// // // // //// // // // //
+
+.greeting {
+  font-size: calc(24px + 1vw);
+  // font-style: italic;
+  font-weight: 400;
+  margin: 0px;
+  text-shadow: 2px 2px 0px $secondary;
+  // width: fit-content;
+}
+
+.nav-items {
+  display: none;
+  font-size: calc(16px + .8vw);
+}
+
+.right-align {
+  margin: 0 0 0 auto;
+}
+
+.tagline {
+  font-size: calc(24px + 1.2vw);
   font-weight: 700;
-  margin: .5rem auto;
-  text-shadow: 3px 3px 0px white;
+  line-height: 48px;
+  margin: 192px 16px;
+}
+
+.center-align {
+  margin: 0;
+  text-align: center;
+}
+
+.header {
+  color: $blackish;
+  font-size: calc(24px + 1vw);
+  font-family: $roboto;
+  font-weight: 700;
+  position: relative;
   width: fit-content;
+
+  &:after {
+    background-color: $primary;
+    content: "";
+    height: calc(10px + 1.8vw);
+    width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.header-two {
+  color: $blackish;
+  font-size: calc(24px + 1vw);
+  font-family: $roboto;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  width: fit-content;
+
+  &:after {
+    background-color: $secondary;
+    content: "";
+    height: calc(10px + 1.8vw);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .about {
-  padding: 0 1rem;
+  padding: 0 16px;
   margin: 0;
 
   p {
@@ -61,7 +228,7 @@ main {
 }
 
 .bio {
-	color: black;
+	color: $blackish;
 	font-family: $roboto;
 	font-size: calc(16px + 0.35vw);
 	font-weight: 400;
@@ -69,8 +236,152 @@ main {
   text-align: justify;
 }
 
+.work-timeline {
+  .job-entry {
+    .job-title {
+      font-family: $roboto;
+      background-color: $primary;
+      color: $blackish;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .job-details {
+      display: none;
+      background-color: $accent;
+      padding: 1rem;
+      font-family: $roboto;
+      color: $blackish;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  .skill-category {
+    width: calc(27% - 1rem);
+    background-color: $primary;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      max-width: 80px;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-family: $roboto;
+      color: $blackish;
+    }
+  }
+
+  .skills-list {
+    width: 100%;
+    background-color: $accent;
+    padding: 1rem;
+    font-family: $roboto;
+    color: $blackish;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.timeline-wrapper {
+  overflow: scroll;
+}
+
+.timeline {
+	width:1400px;
+	height: 80px;
+	list-style: none;
+	text-align: justify;
+	margin: 120px auto;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(45%, rgba(255,255,255,0)), color-stop(51%, $primary), color-stop(57%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 48%, $primary 51%, rgba(255,255,255,0) 54%, rgba(255,255,255,0) 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: $secondary;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    border-radius: 50%;
+
+    p {
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      display: inline-block;
+      content: attr(data-year);
+      font-size: 26px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  li:nth-child(odd):before {
+    top: -40px;
+  }
+
+  li:nth-child(even):before {
+    bottom: -40px;
+  }
+
+  li:after {
+    display: inline-block;
+    content: attr(data-text);
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  li:nth-child(odd):after {
+    bottom: 0;
+    margin-bottom: -10px;
+    transform: translate(-50%, 100%);
+  }
+
+  li:nth-child(even):after {
+    top: 0;
+    margin-top: -10px;
+    transform: translate(-50%, -100%);
+  }
+}
+
 .social {
-	color: black;
+	color: $blackish;
 	font-family: $roboto;
 	font-size: calc(16px + 0.35vw);
 	font-weight: 400;
@@ -88,20 +399,21 @@ main {
 }
 
 .link:active {
-  color: $interactive;
+  // color: $interactive;
 }
 
 .contact-form {
-  background: $primary;
-  border-radius: 2rem;
-  box-shadow:  2px 2px 4px $secondary,  -4px -4px 8px $accent;
+  background: white;
+  // border-radius: 2rem;
+  border: $blackish 2px solid;
+  box-shadow:  2px 2px 4px $secondary,  -4px -4px 8px $primary;
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
 label {
-  color: black;
+  color: $blackish;
   display: flex;
   flex-direction: column;
   font-family: $roboto;
@@ -122,7 +434,7 @@ label {
   background: transparent;
   border: none;
   border-bottom: 1px solid $secondary;
-  color: black;
+  color: $blackish;
   font-family: $roboto;
   font-size: calc(16px + 0.35vw);
   line-height: calc(22px + 1.05vw);
@@ -136,7 +448,7 @@ input:focus {
 
 input:focus ~ .animated-label,
 input:not(:focus):valid ~ .animated-label {
-  color: $interactive;
+  // color: $interactive;
   top: -8px;
 }
 
@@ -152,7 +464,7 @@ textarea:focus {
 
 textarea:focus ~ .animated-label,
 textarea:not(:focus):valid ~ .animated-label {
-  color: $interactive;
+  // color: $interactive;
   top: -8px;
 }
 
@@ -168,21 +480,40 @@ textarea:not(:focus):valid ~ .animated-label {
 }
 
 .submit-btn {
-	color: $accent;
-	background: $secondary;
-  border: none;
-	border-radius: 1rem;
+	color: $blackish;
+	background-color: transparent;
+  // background-size: 150% 150%;
+  border: $blackish 2px solid;
+	// border-radius: 1rem;
   font-family: $roboto;
   font-size: calc(16px + 0.35vw);
   font-weight: 400;
   line-height: calc(22px + 1.05vw);
   margin: 0 auto;
 	padding: .5rem 2rem;
+  // transition: background-color 1s;
   width: fit-content;
+  background-position: center;
+  transition: background 2s;
+}
+
+@keyframes gradient-button {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
 }
 
 .submit-btn:hover {
+  // animation: gradient-button 1s ease-in ;
+  animation-fill-mode: forwards; 
+  // background: $secondary;
+  // background: linear-gradient(135deg, transparent, $secondary 200%);
+  // background-size: cover;
   cursor: pointer;
+  background: #0000 radial-gradient(circle, transparent 1%, $secondary 1%) center/15000% ;
 }
 
 .submit-btn:active {
@@ -204,7 +535,7 @@ textarea:not(:focus):valid ~ .animated-label {
 }
 
 footer {
-  background-color: $secondary;
+  // background-color: $secondary;
   width: 100%;
 }
 
@@ -247,6 +578,34 @@ footer {
   opacity: 0;
 }
 
+.ripple {
+  // transition: background 0.8s;
+  background-position: center;
+  transition: background 2s;
+}
+
+.ripple:hover{
+  background: #0000 radial-gradient(circle, #0000 1%, $secondary 1%) center/15000% ;
+}
+
+@media (min-width: 450px) {
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-items {
+    display: inline;
+  }
+
+  .header, .header-two {
+
+    &:after {
+      width: 125%;
+    }
+  }
+}
+
 @media (min-width: 768px) and (min-height: 425px) {
 
   html {
@@ -260,8 +619,22 @@ footer {
   }
   
   .greeting {
-		margin: auto;
-		max-width: 82%;
+		// margin: auto;
+		// max-width: 82%;
+  }
+
+  .navbar {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  .tagline {
+    margin: 192px auto;
+    max-width: 66.6%;
+  }
+
+  .header, .header-two {
+    font-size: calc(48px + 1.4vw);
   }
 
 	.about, .social {
@@ -279,7 +652,7 @@ footer {
   }
 
 	footer {
-    background: linear-gradient(135deg, $secondary 0%, rgba(109, 255, 255, 0) 50%);
+    // background: linear-gradient(135deg, $secondary 0%, rgba(109, 255, 255, 0) 50%);
 		bottom: 0;
 		position: fixed;
 	}
